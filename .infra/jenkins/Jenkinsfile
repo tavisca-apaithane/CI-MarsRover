@@ -26,6 +26,11 @@ pipeline {
             steps {
                 sh script: '''
                     echo "I am in Sonarqube scan"
+                    ./gradlew sonarqube \
+                      -Dsonar.projectKey=tavisca-apaithane_CI-MarsRover \
+                      -Dsonar.organization=tavisca-apaithane \
+                      -Dsonar.host.url=https://sonarcloud.io \
+                      -Dsonar.login=8320360f4db132bfaa69cf8bccee04912e54aca9
                 ''',
             label: "Running Sonarqube Scan"
             }
