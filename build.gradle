@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.tavisca.workshops.mars'
+
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+sourceSets{
+    main{
+        resources{
+            srcDirs "src/main/java"
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'MarsRoboRover'
+    }
+}
