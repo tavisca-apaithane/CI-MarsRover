@@ -24,6 +24,7 @@ public class MarsRoboRover {
         for (char command : commands.toCharArray()) {
             rover.rove(command);
         }
+        
         return rover.getPosition();
     }
 }
