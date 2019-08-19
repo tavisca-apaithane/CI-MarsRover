@@ -6,7 +6,7 @@ public class MarsRoboRover {
 
     public static void main(String[] args) {
 
-        String currentPosition = "3 3 E";
+        String currentPosition = "4 3 E";
         String commands = "MMRMMRMRRM";
         String[] positions = currentPosition.split(" ");
         x = Integer.valueOf(positions[0]);
